@@ -1,15 +1,17 @@
 ### Date created
-Include the date you created this project and README file.
+20/10/2019
 
 ### Project Title
-Replace the Project Title
+Bikeshare Project for Udacity Data Programming Nanodegree
 
 ### Description
-Describe what your project is about and what it does
+This project uses python to calculate descriptive statistics based on US Bike Share Data provided by Motivate. It was completed as part of the Udacity Introduction to Data Programming Nanodegree.
 
 ### Files used
-Include the files used
+This project makes use of the following files:
+bikeshare.py
+chicago.csv
+new_york_city.csv
+washington.csv
 
-### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
-
+Bikeshare data supplied by https://www.motivateco.com/
