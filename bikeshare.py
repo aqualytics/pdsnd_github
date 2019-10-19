@@ -25,7 +25,7 @@ def get_filters():
             print('\nSorry, I didn\'t catch that. Try again.\n')
             continue
         else:
-            print('\nLooks like you want to learn more about {}. if this is incorrect, restart the program\n'.format(city.title())) #capitalises city name
+            print('\nLooks like you want to learn more about {}. If this is incorrect, exit the program and start again\n'.format(city.title())) #capitalises city name
             break
 
     # get user input for month (all, january, february, ... , june)
@@ -37,7 +37,7 @@ def get_filters():
             print('\nSorry, I didn\'t catch that. Try again.\n')
             continue
         else:
-            print('\nOk, so lets filter the data for {}. If this is incorrect, restart the program\n'.format(month.title())) #capitalises city name
+            print('\nOk, so lets filter the data for {}. If this is incorrect, exit the program and start again\n'.format(month.title())) #capitalises city name
             break
 
         # get user input for day of week (all, monday, tuesday, ... sunday)
@@ -48,7 +48,7 @@ def get_filters():
             print('\nSorry, I didn\'t catch that. Try again.\n')
             continue
         else:
-            print('\nOk, so lets filter the data for {}. If this is incorrect, restart the program\n'.format(day.title())) #capitalises city name
+            print('\nOk, so lets filter the data for {}. If this is incorrect, exit the program and start again\n'.format(day.title())) #capitalises city name
         break
 
     print('-'*40)
