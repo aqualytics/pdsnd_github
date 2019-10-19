@@ -30,7 +30,6 @@ def get_filters():
             break
 
     # get user input for month (all, january, february, ... , june)
-
     while True:
         month = input('\nSelect one of the following months to see data for: January, February, March, April, May or June?\nPlease enter the full name of the month or "All".\n')
         month = month.lower()
@@ -41,7 +40,7 @@ def get_filters():
             print('\nOk, so lets filter the data for {}. If this is incorrect, restart the program\n'.format(month.title())) #capitalises city name
             break
 
-        # get user input for day of week (all, monday, tuesday, ... sunday)
+    # get user input for day of week (all, monday, tuesday, ... sunday)
     while True:
         day = input('\nPlease choose which day of the week you\'d like to see the results for Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, or Sunday?\nPlease enter the full day of the week or "All".\n')
         day = day.lower()
@@ -180,12 +179,12 @@ def user_stats(df):
     user_dep = (df['User Type'].values == 'Dependent').sum()
     print('{} dependents used the bike sharing service.'.format(user_dep))
 
-    # Display counts of gender
 def gender_stats(df):
-
+    """Displays statistics on bikeshare users based on gender."""
     print('\nCalculating Gender Stats...\n')
     start_time = time.time()
-    #to prevent error where there is no gender data
+    # Display counts of gender
+    # Use try/except to prevent error where there is no gender data
     try:
         user_male = (df['Gender'].values == 'Male').sum()
         print('{} users were male'.format(user_male))
@@ -201,11 +200,12 @@ def gender_stats(df):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
-    # Display earliest, most recent, and most common year of birth
 def birth_stats(df):
+    """Displays statistics on bikeshare users based on year of birth."""
     print('\nCalculating Birth Stats...\n')
     start_time = time.time()
-    #to prevent error where there is no birth data
+    # Display earliest, most recent, and most common year of birth
+    # Use try/except to prevent error where there is no birth data
     try:
         earliest_year = df['Birth Year'].min()
         print('The oldest user was born in {}'.format(int(earliest_year)))
